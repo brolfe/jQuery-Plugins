@@ -1,0 +1,4 @@
+select.smpl_dropdown,
+select.smpl_dropdown > option {
+  background-color: grey;
+}

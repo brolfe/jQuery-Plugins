@@ -1,5 +1,12 @@
 $(document).ready(function(){
+  "use strict";
   // Do my business
   // Test it.
-  $('#dropdown_div').text("Hello World");
+  var info =  {
+    names   : ['A', 'B', 'C'],
+    values  : ['a', 'b', 'c'],
+    default : 'b'
+  }
+
+  $('#dropdown_div').smpl_dropdown(info);
 });
