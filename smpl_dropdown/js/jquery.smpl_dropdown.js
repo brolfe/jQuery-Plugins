@@ -1,5 +1,5 @@
 (function($){
-  $.fn.dropdown = function() {
+  $.fn.smpl_dropdown = function() {
     // plugin code
   };
 })(jQuery);
