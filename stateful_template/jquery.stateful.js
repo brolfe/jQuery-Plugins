@@ -14,6 +14,10 @@
 
     // The Instance
     var Instance = function(options, element) {
+        // Ensure we don't pollute the global namespace
+        if(!(this instanceof Instance)) {
+            return new Instance(options, element);
+        }
         this.settings = $.extend(true, {}, Instance.defaults, options);
         this.$element = element;
         this.init();
@@ -27,6 +31,7 @@
             this.$element.addClass('statefulPlugin');
             this.$element.text(this.settings.text);
         },
+        constructor: Instance,
         publicMethod: function(param) {
             // Modify state somehow
             // Possibly modify this.element
